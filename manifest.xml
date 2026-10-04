@@ -6,13 +6,13 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>96824fdf-7bb2-4db2-badb-2da1de3723cf</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.1.0</Version>
   <ProviderName>B.O.R International Trading Ltd</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="BOR"/>
   <Description DefaultValue="BOR column views for the mill order workbooks."/>
-  <IconUrl DefaultValue="https://amit-za.github.io/bor-office-addin/icons/view-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://amit-za.github.io/bor-office-addin/icons/view-80.png"/>
+  <IconUrl DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-80.png"/>
   <SupportUrl DefaultValue="https://amit-za.github.io/bor-office-addin/commands.html"/>
   <AppDomains>
     <AppDomain>https://amit-za.github.io</AppDomain>
@@ -39,9 +39,9 @@
               <Group id="BOR.Views">
                 <Label resid="Views.Label"/>
                 <Icon>
-                  <bt:Image size="16" resid="View.16"/>
-                  <bt:Image size="32" resid="View.32"/>
-                  <bt:Image size="80" resid="View.80"/>
+                  <bt:Image size="16" resid="viewShowAll.16"/>
+                  <bt:Image size="32" resid="viewShowAll.32"/>
+                  <bt:Image size="80" resid="viewShowAll.80"/>
                 </Icon>
                 <Control xsi:type="Button" id="BOR.viewOpenOrder">
                   <Label resid="viewOpenOrder.Label"/>
@@ -50,9 +50,9 @@
                     <Description resid="viewOpenOrder.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="View.16"/>
-                    <bt:Image size="32" resid="View.32"/>
-                    <bt:Image size="80" resid="View.80"/>
+                    <bt:Image size="16" resid="viewOpenOrder.16"/>
+                    <bt:Image size="32" resid="viewOpenOrder.32"/>
+                    <bt:Image size="80" resid="viewOpenOrder.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewOpenOrder</FunctionName>
@@ -65,9 +65,9 @@
                     <Description resid="viewConfirmation.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="View.16"/>
-                    <bt:Image size="32" resid="View.32"/>
-                    <bt:Image size="80" resid="View.80"/>
+                    <bt:Image size="16" resid="viewConfirmation.16"/>
+                    <bt:Image size="32" resid="viewConfirmation.32"/>
+                    <bt:Image size="80" resid="viewConfirmation.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewConfirmation</FunctionName>
@@ -80,9 +80,9 @@
                     <Description resid="viewInvoice.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="View.16"/>
-                    <bt:Image size="32" resid="View.32"/>
-                    <bt:Image size="80" resid="View.80"/>
+                    <bt:Image size="16" resid="viewInvoice.16"/>
+                    <bt:Image size="32" resid="viewInvoice.32"/>
+                    <bt:Image size="80" resid="viewInvoice.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewInvoice</FunctionName>
@@ -95,9 +95,9 @@
                     <Description resid="viewBillOfLading.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="View.16"/>
-                    <bt:Image size="32" resid="View.32"/>
-                    <bt:Image size="80" resid="View.80"/>
+                    <bt:Image size="16" resid="viewBillOfLading.16"/>
+                    <bt:Image size="32" resid="viewBillOfLading.32"/>
+                    <bt:Image size="80" resid="viewBillOfLading.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewBillOfLading</FunctionName>
@@ -110,9 +110,9 @@
                     <Description resid="viewDocuments.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="View.16"/>
-                    <bt:Image size="32" resid="View.32"/>
-                    <bt:Image size="80" resid="View.80"/>
+                    <bt:Image size="16" resid="viewDocuments.16"/>
+                    <bt:Image size="32" resid="viewDocuments.32"/>
+                    <bt:Image size="80" resid="viewDocuments.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewDocuments</FunctionName>
@@ -125,9 +125,9 @@
                     <Description resid="viewPayment.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="View.16"/>
-                    <bt:Image size="32" resid="View.32"/>
-                    <bt:Image size="80" resid="View.80"/>
+                    <bt:Image size="16" resid="viewPayment.16"/>
+                    <bt:Image size="32" resid="viewPayment.32"/>
+                    <bt:Image size="80" resid="viewPayment.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewPayment</FunctionName>
@@ -140,9 +140,9 @@
                     <Description resid="viewShowAll.Tip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="ShowAll.16"/>
-                    <bt:Image size="32" resid="ShowAll.32"/>
-                    <bt:Image size="80" resid="ShowAll.80"/>
+                    <bt:Image size="16" resid="viewShowAll.16"/>
+                    <bt:Image size="32" resid="viewShowAll.32"/>
+                    <bt:Image size="80" resid="viewShowAll.80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
                     <FunctionName>viewShowAll</FunctionName>
@@ -157,12 +157,27 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="View.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/view-16.png"/>
-        <bt:Image id="View.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/view-32.png"/>
-        <bt:Image id="View.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/view-80.png"/>
-        <bt:Image id="ShowAll.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/showall-16.png"/>
-        <bt:Image id="ShowAll.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/showall-32.png"/>
-        <bt:Image id="ShowAll.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/showall-80.png"/>
+        <bt:Image id="viewOpenOrder.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewOpenOrder-16.png"/>
+        <bt:Image id="viewOpenOrder.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewOpenOrder-32.png"/>
+        <bt:Image id="viewOpenOrder.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewOpenOrder-80.png"/>
+        <bt:Image id="viewConfirmation.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewConfirmation-16.png"/>
+        <bt:Image id="viewConfirmation.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewConfirmation-32.png"/>
+        <bt:Image id="viewConfirmation.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewConfirmation-80.png"/>
+        <bt:Image id="viewInvoice.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewInvoice-16.png"/>
+        <bt:Image id="viewInvoice.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewInvoice-32.png"/>
+        <bt:Image id="viewInvoice.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewInvoice-80.png"/>
+        <bt:Image id="viewBillOfLading.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewBillOfLading-16.png"/>
+        <bt:Image id="viewBillOfLading.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewBillOfLading-32.png"/>
+        <bt:Image id="viewBillOfLading.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewBillOfLading-80.png"/>
+        <bt:Image id="viewDocuments.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewDocuments-16.png"/>
+        <bt:Image id="viewDocuments.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewDocuments-32.png"/>
+        <bt:Image id="viewDocuments.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewDocuments-80.png"/>
+        <bt:Image id="viewPayment.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewPayment-16.png"/>
+        <bt:Image id="viewPayment.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewPayment-32.png"/>
+        <bt:Image id="viewPayment.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewPayment-80.png"/>
+        <bt:Image id="viewShowAll.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-16.png"/>
+        <bt:Image id="viewShowAll.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-32.png"/>
+        <bt:Image id="viewShowAll.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://amit-za.github.io/bor-office-addin/commands.html"/>
