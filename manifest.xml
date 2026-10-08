@@ -6,11 +6,11 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>96824fdf-7bb2-4db2-badb-2da1de3723cf</Id>
-  <Version>1.0.1.0</Version>
+  <Version>1.1.0.0</Version>
   <ProviderName>B.O.R International Trading Ltd</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="BOR"/>
-  <Description DefaultValue="BOR column views for the mill order workbooks."/>
+  <Description DefaultValue="BOR column views and sheet protection for the mill order workbooks."/>
   <IconUrl DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-80.png"/>
   <SupportUrl DefaultValue="https://amit-za.github.io/bor-office-addin/commands.html"/>
@@ -149,6 +149,44 @@
                   </Action>
                 </Control>
               </Group>
+              <Group id="BOR.Protection">
+                <Label resid="Protection.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="protectSheet.16"/>
+                  <bt:Image size="32" resid="protectSheet.32"/>
+                  <bt:Image size="80" resid="protectSheet.80"/>
+                </Icon>
+                <Control xsi:type="Button" id="BOR.protectSheet">
+                  <Label resid="protectSheet.Label"/>
+                  <Supertip>
+                    <Title resid="protectSheet.Label"/>
+                    <Description resid="protectSheet.Tip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="protectSheet.16"/>
+                    <bt:Image size="32" resid="protectSheet.32"/>
+                    <bt:Image size="80" resid="protectSheet.80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>protectSheet</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="BOR.unprotectSheet">
+                  <Label resid="unprotectSheet.Label"/>
+                  <Supertip>
+                    <Title resid="unprotectSheet.Label"/>
+                    <Description resid="unprotectSheet.Tip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="unprotectSheet.16"/>
+                    <bt:Image size="32" resid="unprotectSheet.32"/>
+                    <bt:Image size="80" resid="unprotectSheet.80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>unprotectSheet</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
               <Label resid="Tab.Label"/>
             </CustomTab>
           </ExtensionPoint>
@@ -178,6 +216,12 @@
         <bt:Image id="viewShowAll.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-16.png"/>
         <bt:Image id="viewShowAll.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-32.png"/>
         <bt:Image id="viewShowAll.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/viewShowAll-80.png"/>
+        <bt:Image id="protectSheet.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/protectSheet-16.png"/>
+        <bt:Image id="protectSheet.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/protectSheet-32.png"/>
+        <bt:Image id="protectSheet.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/protectSheet-80.png"/>
+        <bt:Image id="unprotectSheet.16" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/unprotectSheet-16.png"/>
+        <bt:Image id="unprotectSheet.32" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/unprotectSheet-32.png"/>
+        <bt:Image id="unprotectSheet.80" DefaultValue="https://amit-za.github.io/bor-office-addin/icons/unprotectSheet-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://amit-za.github.io/bor-office-addin/commands.html"/>
@@ -185,6 +229,7 @@
       <bt:ShortStrings>
         <bt:String id="Tab.Label" DefaultValue="BOR"/>
         <bt:String id="Views.Label" DefaultValue="Views"/>
+        <bt:String id="Protection.Label" DefaultValue="Protection"/>
         <bt:String id="viewOpenOrder.Label" DefaultValue="Open Order"/>
         <bt:String id="viewConfirmation.Label" DefaultValue="Confirmation"/>
         <bt:String id="viewInvoice.Label" DefaultValue="Invoice"/>
@@ -192,6 +237,8 @@
         <bt:String id="viewDocuments.Label" DefaultValue="Documents"/>
         <bt:String id="viewPayment.Label" DefaultValue="Payment"/>
         <bt:String id="viewShowAll.Label" DefaultValue="Show All"/>
+        <bt:String id="protectSheet.Label" DefaultValue="Protect"/>
+        <bt:String id="unprotectSheet.Label" DefaultValue="Un-Protect"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="viewOpenOrder.Tip" DefaultValue="Show the Open Order columns on the Orders sheet."/>
@@ -201,6 +248,8 @@
         <bt:String id="viewDocuments.Tip" DefaultValue="Show the Documents columns on the Orders sheet."/>
         <bt:String id="viewPayment.Tip" DefaultValue="Show the Payment columns on the Orders sheet."/>
         <bt:String id="viewShowAll.Tip" DefaultValue="Show every column on the Orders sheet."/>
+        <bt:String id="protectSheet.Tip" DefaultValue="Turn on protection for the active sheet."/>
+        <bt:String id="unprotectSheet.Tip" DefaultValue="Turn off protection for the active sheet."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
